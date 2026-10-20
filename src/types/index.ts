@@ -141,6 +141,14 @@ export interface TestimonialItem {
   avatar: string;
   rating?: number;
   industry?: string;
+  metric?: {
+    value: string;
+    label: string;
+  };
+  serviceUsed?: string;
+  verified?: boolean;
+  location?: string;
+  tagline?: string;
 }
 
 export interface ConsultationFormData {

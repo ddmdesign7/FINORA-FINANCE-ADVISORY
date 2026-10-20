@@ -3,7 +3,8 @@ import { Link } from '../context/RouterContext';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { SEOHelmet } from '../components/common/SEOHelmet';
-import { caseStudiesData, testimonialsData, clientLogos } from '../data/clients';
+import { Testimonials } from '../components/common/Testimonials';
+import { caseStudiesData, clientLogos } from '../data/clients';
 import {
   CheckCircle2,
   ArrowRight,
@@ -197,50 +198,12 @@ export const ClientsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Testimonials Grid */}
-      <section className="py-20 lg:py-28 bg-white border-b border-[#E4E7EC]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          <SectionHeading
-            align="center"
-            eyebrow="CLIENT TESTIMONIALS"
-            heading="Endorsements From Executive Leadership"
-            description="Read verified feedback from founders, CFOs, and managing directors who rely on Finora."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonialsData.map((test) => (
-              <div
-                key={test.id}
-                className="bg-[#F5F7FA] rounded-2xl p-6 sm:p-8 border border-[#E4E7EC] flex flex-col justify-between space-y-6"
-              >
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-1 text-[#D6A84F]">
-                    {[...Array(test.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))}
-                  </div>
-
-                  <p className="text-xs sm:text-sm text-[#0B1F33] leading-relaxed italic font-serif">
-                    "{test.quote}"
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-[#E4E7EC] flex items-center space-x-3">
-                  <img
-                    src={test.avatar}
-                    alt={test.name}
-                    className="w-10 h-10 rounded-full object-cover border border-[#E4E7EC]"
-                  />
-                  <div>
-                    <div className="text-xs font-bold text-[#0B1F33]">{test.name}</div>
-                    <div className="text-[11px] text-[#667085]">{test.position}, {test.company}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Testimonials & Verified Executive Endorsements */}
+      <Testimonials
+        eyebrow="CLIENT TESTIMONIALS & AUDITED STORIES"
+        heading="Endorsements From Executive Leadership"
+        description="Read verified feedback from founders, CFOs, and managing directors who rely on Finora across 8 industry sectors."
+      />
 
       {/* Bottom CTA */}
       <section className="py-20 bg-[#0B1F33] text-white text-center">

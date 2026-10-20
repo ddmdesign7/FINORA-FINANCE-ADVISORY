@@ -95,62 +95,122 @@ export const testimonialsData: TestimonialItem[] = [
   {
     id: '1',
     quote: 'Finora helped us turn complicated financial information into a clear, actionable strategy our leadership team could execute immediately. Their FP&A insights were transformative.',
+    tagline: 'Transformed fragmented board reporting into decisive FP&A roadmaps',
     name: 'Sarah Montgomery',
     position: 'Chief Financial Officer',
     company: 'Aura Technology Group',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
     rating: 5,
-    industry: 'Technology'
+    industry: 'Technology',
+    metric: { value: '+42%', label: 'Budgeting Velocity' },
+    serviceUsed: 'FP&A & Financial Modeling',
+    verified: true,
+    location: 'San Francisco, CA'
   },
   {
     id: '2',
     quote: 'In our 20 years of operations, we have never worked with an advisory firm that combines deep quantitative modeling with such practical business understanding.',
+    tagline: 'Precision cost segregation and inventory optimization across 6 facilities',
     name: 'David O’Connor',
     position: 'Managing Director',
     company: 'Apex Industrial Systems',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop',
     rating: 5,
-    industry: 'Manufacturing'
+    industry: 'Manufacturing',
+    metric: { value: '$3.4M', label: 'EBITDA Expansion' },
+    serviceUsed: 'Corporate Restructuring',
+    verified: true,
+    location: 'Chicago, IL'
   },
   {
     id: '3',
     quote: 'The tax structuring and cross-border advisory from Finora saved our healthcare platform millions during our European acquisition. They are our most trusted advisors.',
+    tagline: 'Flawless multinational tax architecture for dual-jurisdiction buyout',
     name: 'Dr. Evelyn Martinez',
     position: 'Executive Vice President',
     company: 'BioNexus Healthcare Solutions',
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop',
     rating: 5,
-    industry: 'Healthcare'
+    industry: 'Healthcare',
+    metric: { value: '$5.2M', label: 'Tax Deductions Secured' },
+    serviceUsed: 'International Tax Advisory',
+    verified: true,
+    location: 'London, UK'
   },
   {
     id: '4',
     quote: 'From restructuring our capital stack to optimizing daily cash conversion, Finora has been a key driver behind our 3x valuation expansion over the last three years.',
+    tagline: 'Tripled commercial portfolio valuation with synthetic debt covenants',
     name: 'Alexander Ward',
     position: 'Founder & CEO',
     company: 'Meridian Urban Developments',
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop',
     rating: 5,
-    industry: 'Real Estate'
+    industry: 'Real Estate',
+    metric: { value: '3.1x', label: 'Valuation Multiple Growth' },
+    serviceUsed: 'Capital Raising & Debt Structuring',
+    verified: true,
+    location: 'New York, NY'
   },
   {
     id: '5',
     quote: 'The speed and precision of their accounting and controllership team is unmatched. We cut our month-end close from three weeks to four days within 60 days of onboarding.',
+    tagline: 'Accelerated month-end accounting close from 21 days down to 4 days',
     name: 'Helena Vance-Price',
     position: 'Chief Operating Officer',
     company: 'Solaris Energy Holdings',
     avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop',
     rating: 5,
-    industry: 'Energy'
+    industry: 'Energy',
+    metric: { value: '4 Days', label: 'Month-End Close Record' },
+    serviceUsed: 'Outsourced Accounting & CPA',
+    verified: true,
+    location: 'Austin, TX'
   },
   {
     id: '6',
     quote: 'Finora’s M&A advisory and Quality of Earnings defense were the difference between a stalled transaction and a record-breaking exit multiple for our founders.',
+    tagline: 'Defended EBITDA normalization adjustments in high-stakes $120M sale',
     name: 'Tariq Al-Hashemi',
     position: 'Principal Investor',
     company: 'Crestview Capital Partners',
     avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop',
     rating: 5,
-    industry: 'Private Equity'
+    industry: 'Private Equity',
+    metric: { value: '$120M', label: 'Exit Transaction Value' },
+    serviceUsed: 'M&A Advisory & QoE',
+    verified: true,
+    location: 'Dubai, UAE'
+  },
+  {
+    id: '7',
+    quote: 'Finora reconstructed our 5-year unit economics and investor data room ahead of our Series B. We closed $28M at a 25% valuation premium in a tough market.',
+    tagline: 'Built institutional-grade cohort model securing $28M Series B round',
+    name: 'Rachel K. Chen',
+    position: 'Founder & CEO',
+    company: 'Helix Cloud Systems',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
+    rating: 5,
+    industry: 'Technology',
+    metric: { value: '$28M', label: 'Series B Capital Raised' },
+    serviceUsed: 'Strategic Financial Planning',
+    verified: true,
+    location: 'Boston, MA'
+  },
+  {
+    id: '8',
+    quote: 'Unlocking $4.2M in dormant working capital gave us the liquidity buffer needed to acquire two competitors without raising dilutive equity.',
+    tagline: 'DSO reduction and inventory rebalancing unlocked immediate cash buffer',
+    name: 'Jonathan Sterling',
+    position: 'Chief Executive Officer',
+    company: 'Vanguard Logistics',
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop',
+    rating: 5,
+    industry: 'Transportation',
+    metric: { value: '$4.2M', label: 'Working Capital Unlocked' },
+    serviceUsed: 'Working Capital & Treasury',
+    verified: true,
+    location: 'Toronto, ON'
   }
 ];
 

@@ -3,10 +3,11 @@ import { Link, useRouter } from '../context/RouterContext';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { StatCounter } from '../components/common/StatCounter';
 import { SEOHelmet } from '../components/common/SEOHelmet';
+import { Testimonials } from '../components/common/Testimonials';
 import { servicesData } from '../data/services';
 import { industriesData } from '../data/industries';
 import { newsArticlesData } from '../data/news';
-import { testimonialsData, clientLogos, academyArticles } from '../data/clients';
+import { clientLogos, academyArticles } from '../data/clients';
 import {
   ArrowRight,
   TrendingUp,
@@ -31,24 +32,6 @@ import {
 
 export const HomePage: React.FC = () => {
   const { navigate, setIsCalculatorOpen } = useRouter();
-
-  // Testimonial carousel state
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTestimonial(prev => (prev + 1) % testimonialsData.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial(prev => (prev + 1) % testimonialsData.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial(prev => (prev - 1 + testimonialsData.length) % testimonialsData.length);
-  };
 
   // 6 Services for Home
   const homeServices = servicesData.slice(0, 6);
@@ -593,76 +576,8 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 19. TESTIMONIAL SECTION */}
-      <section className="py-20 lg:py-28 bg-white border-b border-[#E4E7EC]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
-          <SectionHeading
-            align="center"
-            eyebrow="TESTIMONIALS"
-            heading="Trusted by Leaders Who Value Precision"
-            description="Hear how our advisory frameworks have empowered executives, founders, and investors worldwide."
-          />
-
-          {/* Testimonial Carousel Card */}
-          <div className="bg-[#F5F7FA] rounded-2xl p-8 sm:p-12 border border-[#E4E7EC] relative shadow-sm">
-            <div className="min-h-[160px] flex flex-col justify-center">
-              <p className="font-serif italic text-lg sm:text-2xl text-[#0B1F33] leading-relaxed">
-                "{testimonialsData[currentTestimonial].quote}"
-              </p>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-[#E4E7EC] flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="flex items-center space-x-4">
-                <img
-                  src={testimonialsData[currentTestimonial].avatar}
-                  alt={testimonialsData[currentTestimonial].name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-[#155EEF]"
-                />
-                <div className="text-left">
-                  <div className="font-display font-bold text-base text-[#0B1F33]">
-                    {testimonialsData[currentTestimonial].name}
-                  </div>
-                  <div className="text-xs text-[#667085]">
-                    {testimonialsData[currentTestimonial].position}, {testimonialsData[currentTestimonial].company}
-                  </div>
-                </div>
-              </div>
-
-              {/* Controls */}
-              <div className="flex items-center space-x-2">
-                <button
-                  onClick={prevTestimonial}
-                  className="p-2 rounded-lg bg-white hover:bg-slate-100 text-[#0B1F33] border border-[#E4E7EC] transition-colors"
-                  aria-label="Previous Testimonial"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={nextTestimonial}
-                  className="p-2 rounded-lg bg-white hover:bg-slate-100 text-[#0B1F33] border border-[#E4E7EC] transition-colors"
-                  aria-label="Next Testimonial"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-
-            {/* Pagination Indicators */}
-            <div className="flex justify-center space-x-1.5 mt-6">
-              {testimonialsData.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrentTestimonial(idx)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all ${
-                    currentTestimonial === idx ? 'w-6 bg-[#155EEF]' : 'bg-slate-300'
-                  }`}
-                  aria-label={`Go to slide ${idx + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 19. TESTIMONIALS & SOCIAL PROOF */}
+      <Testimonials />
 
       {/* 20. NEWS PREVIEW */}
       <section className="py-20 lg:py-28 bg-[#F5F7FA] border-b border-[#E4E7EC]">

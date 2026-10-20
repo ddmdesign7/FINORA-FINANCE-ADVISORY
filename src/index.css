@@ -34,3 +34,62 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
 }
 
+/* Smooth continuous marquee scroll animations */
+@keyframes marquee-scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-left 42s linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-right 48s linear infinite;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-right:hover,
+.pause-marquee {
+  animation-play-state: paused !important;
+}
+
+.speed-slow {
+  animation-duration: 65s !important;
+}
+
+.speed-normal {
+  animation-duration: 42s !important;
+}
+
+.speed-fast {
+  animation-duration: 25s !important;
+}
+
+/* Hide scrollbar for clean carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
