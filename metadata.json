@@ -1,0 +1,7 @@
+{
+  "name": "Finora - Finance & Advisory",
+  "description": "Smarter Financial Decisions. Stronger Business Growth. Premium financial advisory, strategic planning, tax advisory, and investment guidance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
